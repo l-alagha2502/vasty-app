@@ -1,23 +1,21 @@
-# Use node:alpine for a small, optimized image (Arm64 compatible)
-FROM --platform=$BUILDPLATFORM node:20-alpine AS builder
+# Use Node 20 on Alpine for a small, fast image
+FROM node:20-alpine
 
+# Create app directory
 WORKDIR /usr/src/app
 
-# Install dependencies
+# Install app dependencies
+# A wildcard ensures both package.json AND package-lock.json are copied
 COPY package*.json ./
-RUN npm ci --only=production
 
-# Final stage
-FROM --platform=$TARGETPLATFORM node:20-alpine
+# Just run npm install to get the dependencies ready
+RUN npm install --production
 
-WORKDIR /usr/src/app
-
-# Copy from builder
-COPY --from=builder /usr/src/app/node_modules ./node_modules
+# Bundle app source
 COPY . .
 
 # Set production environment
 ENV NODE_ENV=production
 
-# Start the bot
-CMD ["node", "src/index.js"]
+# Start the bot from your src folder
+CMD [ "node", "src/index.js" ]
