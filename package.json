@@ -1,0 +1,28 @@
+{
+  "name": "vast-bot",
+  "version": "1.0.0",
+  "description": "Production Build of Vasty Bot - All-in-One Solution",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "deploy": "node src/deploy-commands.js"
+  },
+  "engines": {
+    "node": ">=16.11.0"
+  },
+  "author": "Vast",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^14.25.1",
+    "dotenv": "^16.6.1",
+    "mongoose": "^9.3.3",
+    "string-similarity": "^4.0.4"
+  },
+  "devDependencies": {
+    "@discordjs/rest": "^1.5.0",
+    "discord-api-types": "^0.37.0",
+    "nodemon": "^2.0.0"
+  }
+}
