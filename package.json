@@ -1,28 +1,24 @@
 {
-  "name": "vast-bot",
-  "version": "1.0.0",
-  "description": "Production Build of Vasty Bot - All-in-One Solution",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "deploy": "node src/deploy-commands.js"
-  },
-  "engines": {
-    "node": ">=16.11.0"
-  },
-  "author": "Vast",
-  "license": "MIT",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "discord.js": "^14.25.1",
-    "dotenv": "^16.6.1",
-    "mongoose": "^9.3.3",
-    "string-similarity": "^4.0.4"
-  },
-  "devDependencies": {
-    "@discordjs/rest": "^1.5.0",
-    "discord-api-types": "^0.37.0",
-    "nodemon": "^2.0.0"
-  }
-}
+    2   "name": "vasty-bot",
+    3   "version": "1.2.0",
+    4   "description": "Premium All-in-One Discord Infrastructure - Brutalist Edition",
+    5   "main": "src/index.js",
+    6   "scripts": {
+    7     "start": "node src/index.js",
+    8     "init-db": "node src/database/initDB.js",
+    9     "deploy": "node src/deploy-commands.js"
+   10   },
+   11   "dependencies": {
+   12     "discord.js": "^14.14.1",
+   13     "pg": "^8.11.3",
+   14     "dotenv": "^16.4.5",
+   15     "colors": "^1.4.0",
+   16     "canvas": "^2.11.2",
+   17     "string-similarity": "^4.0.4"
+   18   },
+   19   "engines": {
+   20     "node": ">=18.0.0"
+   21   },
+   22   "author": "VAST™",
+   23   "license": "MIT"
+   24 }
